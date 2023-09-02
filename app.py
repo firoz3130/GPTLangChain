@@ -18,7 +18,7 @@ prompt = st.text_input('Typpe in your prompt here')
 # Prompt templates
 title_template = PromptTemplate(
     input_variables=['topic'],
-    template='write me a youtube video title about {topic}'
+    template='Get me important notes from youtube for the topic known as {topic}'
 )
 
 script_template = PromptTemplate(
@@ -31,6 +31,10 @@ title_memory = ConversationBufferMemory(
     input_key='topic', memory_key='chat_history')
 script_memory = ConversationBufferMemory(
     input_key='title', memory_key='chat_history')
+# llm = OpenAI(temperature=0.9)
+# How to get something creative using the GPT-3 API key which I have
+# So I will help you get something creative using the GPT-3 API key which I have
+# We can develop a script so that we can fetch the data from the youtube and wikipedia/Code is below
 
 
 # Llms
